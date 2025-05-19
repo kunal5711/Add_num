@@ -14,12 +14,10 @@ def add_numbers():
         
         # Return result as JSON
         return jsonify({
-            'result': result,
-            'num1': num1,
-            'num2': num2
+            'result': result
         })
     except ValueError:
         return jsonify({'error': 'Please provide valid numbers'}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=False)
